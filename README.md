@@ -79,6 +79,7 @@ The website review used anonymous public pages only; no accounts, forms, transac
 - `content/docs/meta.json`: sidebar order; folders determine nested URLs.
 - `lib/layout.shared.tsx`: navigation and main-site link.
 - `lib/shared.ts`: app name, production origin, and optional repository URL.
+- `app/global.css`: the fixed Think4U cream, maroon, and gold palette. Theme selection is disabled in `components/provider.tsx` and `lib/layout.shared.tsx`.
 - `lib/public-info.ts` and `components/public-footer.tsx`: approved public contact details, website links, social channels, and donation notices.
 - `app/layout.tsx`: default metadata.
 - `app/sitemap.ts` and `app/robots.ts`: statically generated discovery files.

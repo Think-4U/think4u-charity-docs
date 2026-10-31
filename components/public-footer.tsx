@@ -3,7 +3,7 @@ import { organization, policyLinks, publicLinks, socialLinks } from '@/lib/publi
 
 export function PublicFooter() {
   return (
-    <footer className="border-t bg-fd-muted/30 px-6 py-12 text-sm">
+    <footer className="brand-panel border-t px-6 py-12 text-sm">
       <div className="mx-auto max-w-7xl">
         <div className="mb-10 flex flex-wrap items-start justify-between gap-6">
           <div className="max-w-xl">

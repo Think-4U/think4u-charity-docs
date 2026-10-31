@@ -2,6 +2,64 @@
 @import 'fumadocs-ui/css/neutral.css';
 @import 'fumadocs-ui/css/preset.css';
 
+/* Brand colors from think4u.org, with a darker bronze for readable body links. */
+@theme {
+  --color-brand-dark: #1f0606;
+  --color-brand-gold: #d58d4b;
+  --color-brand-gold-hover: #c97835;
+  --color-fd-background: #f4eadf;
+  --color-fd-foreground: #24120b;
+  --color-fd-muted: #eadbcb;
+  --color-fd-muted-foreground: #74533f;
+  --color-fd-popover: #fff8f0;
+  --color-fd-popover-foreground: #24120b;
+  --color-fd-card: #fcf6ef;
+  --color-fd-card-foreground: #24120b;
+  --color-fd-border: #d9bea4;
+  --color-fd-primary: #8c4a1f;
+  --color-fd-primary-foreground: #fff8f0;
+  --color-fd-secondary: #ecdcc9;
+  --color-fd-secondary-foreground: #422016;
+  --color-fd-accent: #e8c6a3;
+  --color-fd-accent-foreground: #3c190e;
+  --color-fd-ring: #8c4a1f;
+  --color-fd-overlay: rgb(31 6 6 / 45%);
+}
+
+:root {
+  color-scheme: light;
+}
+
+/* Keep the public website's maroon surfaces and gold highlights. */
+.brand-panel,
+#nd-sidebar,
+#nd-nav,
+#nd-subnav {
+  --color-fd-background: #1f0606;
+  --color-fd-foreground: #fff5e9;
+  --color-fd-card: #1f0606;
+  --color-fd-card-foreground: #fff5e9;
+  --color-fd-muted: #321613;
+  --color-fd-muted-foreground: #dfc6b0;
+  --color-fd-popover: #321613;
+  --color-fd-popover-foreground: #fff5e9;
+  --color-fd-primary: #d58d4b;
+  --color-fd-primary-foreground: #1f0606;
+  --color-fd-secondary: #42221b;
+  --color-fd-secondary-foreground: #fff5e9;
+  --color-fd-accent: #49271d;
+  --color-fd-accent-foreground: #ffddb3;
+  --color-fd-border: #6a3c2b;
+  --color-fd-ring: #d58d4b;
+  background-color: var(--color-fd-background);
+  color: var(--color-fd-foreground);
+}
+
+::selection {
+  background: #d58d4b;
+  color: #1f0606;
+}
+
 html {
   scrollbar-gutter: stable;
 }

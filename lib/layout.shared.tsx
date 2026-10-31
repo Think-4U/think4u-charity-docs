@@ -3,6 +3,7 @@ import { appName, githubUrl } from './shared';
 
 export function baseOptions(): BaseLayoutProps {
   return {
+    themeSwitch: { enabled: false },
     nav: {
       // JSX supported
       title: appName,
