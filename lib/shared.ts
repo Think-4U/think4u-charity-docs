@@ -1,6 +1,6 @@
 import { createGetUrl } from 'fumadocs-core/source';
 
-export const appName = 'Think4u Docs';
+export const appName = 'Think4U Docs';
 export const siteUrl = 'https://docs.think4u.org';
 export const docsRoute = '/docs';
 export const docsImageRoute = '/og/docs';

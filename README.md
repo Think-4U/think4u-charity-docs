@@ -60,10 +60,26 @@ To validate the deployment configuration without publishing, build the app and r
 
 ## Content and configuration
 
+The public handbook covers the organization, donations, volunteering, student initiatives, partnerships, programs, events, impact, policies, support, and official links. Public website text was reviewed on **1 November 2026** against all 28 sitemap entries. The visitor guides link to original policies rather than copying the complete legal package. They do not verify a statutory approval or independently audit impact figures.
+
+### Public content review
+
+- Publish only organization-approved public information and link each guide to its official sources.
+- Keep domestic-only donations, pending FCRA authorization, and pending 80G approval notices consistent with the current official policies. An application or donation receipt must not be presented as an approval or tax-deduction guarantee.
+- Distinguish proposed programs and targets from completed work. Confirm schedules before describing an opportunity as open.
+- Include only the approved office contact details. Link to live leadership pages rather than copying personal profiles or contact lists.
+- Exclude credentials, tokens, donor/beneficiary records, payment identifiers, identity documents, private group invitations, internal system details, and vulnerability reproduction material.
+- Review generated search data, Markdown exports, and `llms-full.txt` as public outputs too. They must contain the same approved content as the rendered pages.
+- Main-site Consent Settings remain on the main website; the docs provide instructions and links without pretending to change cross-domain consent.
+- Update the review date in `lib/public-info.ts` and relevant guides when rechecking information. Use the live notices if a dated summary differs.
+
+The website review used anonymous public pages only; no accounts, forms, transactions, or private records were accessed. Research snapshots are not part of this repository or its static export.
+
 - `content/docs/*.mdx`: documentation pages with `title` and `description` frontmatter.
 - `content/docs/meta.json`: sidebar order; folders determine nested URLs.
 - `lib/layout.shared.tsx`: navigation and main-site link.
 - `lib/shared.ts`: app name, production origin, and optional repository URL.
+- `lib/public-info.ts` and `components/public-footer.tsx`: approved public contact details, website links, social channels, and donation notices.
 - `app/layout.tsx`: default metadata.
 - `app/sitemap.ts` and `app/robots.ts`: statically generated discovery files.
 

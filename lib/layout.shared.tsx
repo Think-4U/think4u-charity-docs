@@ -8,6 +8,10 @@ export function baseOptions(): BaseLayoutProps {
       title: appName,
     },
     githubUrl,
-    links: [{ text: 'think4u.org', url: 'https://think4u.org', external: true }],
+    links: [
+      { text: 'Donate', url: 'https://think4u.org/donate', external: true },
+      { text: 'Volunteer', url: 'https://think4u.org/volunteer', external: true },
+      { text: 'think4u.org', url: 'https://think4u.org', external: true },
+    ],
   };
 }

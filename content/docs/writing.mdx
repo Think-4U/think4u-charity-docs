@@ -1,39 +1,20 @@
 ---
-title: Writing documentation
-description: Add and organize pages in the Think4u knowledge base.
+title: Suggest a correction
+description: Help keep the public Think4U guides accurate without sharing private information.
 ---
 
-## Add a page
+If a guide has an outdated link, unclear instruction, or incorrect public detail, send a correction through the [official contact form](https://think4u.org/contact) or email [info@think4u.org](mailto:info@think4u.org).
 
-Create an MDX file inside `content/docs`. Every page needs a title; include a description to help readers and search engines understand it.
+## What to include
 
-```mdx title="content/docs/example.mdx"
----
-title: Example guide
-description: Explain what this guide helps the reader accomplish.
----
+Include the documentation page address, the section that needs attention, your suggested wording, and a link to an official public source where available. For a changed program date or policy notice, link to the new announcement rather than sending private correspondence.
 
-## Before you begin
+## Keep personal information private
 
-List anything the reader needs.
+Do not post donor records, beneficiary details, identity documents, financial statements, payment screenshots, login codes, or private group invitations as documentation corrections. Use the [payment support guide](/docs/donations/receipts-and-refunds) for transaction issues and the [grievance guide](/docs/policies/grievances) for personal concerns.
 
-## Follow the steps
+## Report security issues separately
 
-Explain the task with examples.
-```
+Send suspected vulnerabilities through the [responsible reporting route](/docs/policies/security-and-reporting). Do not include exploit details, access credentials, or another person's information in a public correction.
 
-This example becomes `/docs/example`. Folders define nested URLs, and `index.mdx` is the landing page of its folder.
-
-## Organize navigation
-
-Add the page name to `content/docs/meta.json` in the order readers should see it. Nested folders can have their own `meta.json` file.
-
-## Preserve existing guides
-
-When migrating Markdown, keep its content intact. Add the required frontmatter and update links to match the new page paths.
-
-## Preview your changes
-
-Run `npm run dev` and open `/docs`. Before publishing, run `npm run build` to verify every page and regenerate the search index, Markdown exports, and social images.
-
-See the [Fumadocs Markdown guide](https://fumadocs.dev/docs/markdown) for supported components and syntax.
+Sources: [Contact](https://think4u.org/contact), [Privacy Policy](https://think4u.org/privacy-policy), [Security & Bug Bounty Policy](https://think4u.org/security-policy).
