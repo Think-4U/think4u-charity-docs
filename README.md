@@ -40,6 +40,24 @@ No Worker, OpenNext adapter, runtime API key, or server is required: search, Mar
 
 References: [Cloudflare static Next.js guide](https://developers.cloudflare.com/pages/framework-guides/nextjs/deploy-a-static-nextjs-site/), [Cloudflare custom domains](https://developers.cloudflare.com/pages/configuration/custom-domains/), [Fumadocs CLI](https://fumadocs.dev/docs/cli/create-fumadocs-app).
 
+## Cloudflare Workers Static Assets
+
+If Cloudflare's setup screen requires both a deploy command and a preview command, it is creating a Worker. This app also supports that flow as a static asset deployment. The checked-in `wrangler.jsonc` specifies the Worker name, compatibility date, exported `out/` directory, and static 404 handling. No OpenNext migration or server bundle is needed.
+
+| Setting | Value |
+| --- | --- |
+| Build command | `npm run build` |
+| Deploy command | `npx wrangler deploy` |
+| Preview command | `npx wrangler versions upload` |
+| Root directory | Repository root (leave blank) |
+| Production branch | `main` |
+
+The previously supplied commands with `--assets=./out --name think4u-charity-docs` also work with this configuration. Both commands now read the required compatibility date from the repository. Redeploy the latest commit rather than an earlier commit missing this file.
+
+After the Worker deploys, add `docs.think4u.org` in its **Settings → Domains & Routes → Add → Custom Domain**. Workers custom domains use the Workers domain flow, separate from the Pages setup above.
+
+To validate the deployment configuration without publishing, build the app and run `npx wrangler deploy --dry-run`.
+
 ## Content and configuration
 
 - `content/docs/*.mdx`: documentation pages with `title` and `description` frontmatter.
