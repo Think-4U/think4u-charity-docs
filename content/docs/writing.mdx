@@ -1,0 +1,39 @@
+---
+title: Writing documentation
+description: Add and organize pages in the Think4u knowledge base.
+---
+
+## Add a page
+
+Create an MDX file inside `content/docs`. Every page needs a title; include a description to help readers and search engines understand it.
+
+```mdx title="content/docs/example.mdx"
+---
+title: Example guide
+description: Explain what this guide helps the reader accomplish.
+---
+
+## Before you begin
+
+List anything the reader needs.
+
+## Follow the steps
+
+Explain the task with examples.
+```
+
+This example becomes `/docs/example`. Folders define nested URLs, and `index.mdx` is the landing page of its folder.
+
+## Organize navigation
+
+Add the page name to `content/docs/meta.json` in the order readers should see it. Nested folders can have their own `meta.json` file.
+
+## Preserve existing guides
+
+When migrating Markdown, keep its content intact. Add the required frontmatter and update links to match the new page paths.
+
+## Preview your changes
+
+Run `npm run dev` and open `/docs`. Before publishing, run `npm run build` to verify every page and regenerate the search index, Markdown exports, and social images.
+
+See the [Fumadocs Markdown guide](https://fumadocs.dev/docs/markdown) for supported components and syntax.
